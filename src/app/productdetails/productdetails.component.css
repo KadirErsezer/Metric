@@ -1,0 +1,17 @@
+.list-group-item {
+    border: none;
+}
+
+.card {
+    border: none;
+}
+
+h1 {
+    border-radius: 8px 8px 0px 0px;
+}
+
+#productCarousel img {
+    width: 100%;
+    height: auto; /* Genişliği koru, yüksekliği otomatik olarak ayarla */
+    object-fit: cover; /* Görseli kapla */
+  }

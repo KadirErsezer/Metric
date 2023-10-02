@@ -1,0 +1,13 @@
+.inputs {
+    position: relative;
+    left: 50%;
+}
+
+@media (max-width: 768px) {
+    #inputted {
+        position: relative;
+        top: 10px;
+        transform: translate(-50%,-50%);
+        padding-left: 50%;
+    }
+  }

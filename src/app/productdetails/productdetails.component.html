@@ -1,0 +1,76 @@
+
+ <!-- BÜTÜN ÜRÜNLERİN BİLGİLERİNİ GETİRİYOR -->
+<!-- <div *ngFor="let product of products">
+  <div *ngFor="let key of getObjectKeys(product)">
+    <p><b>{{ key }}:</b> {{ product[key] }}</p>
+  </div>
+</div> -->
+
+<div *ngIf="product" class="ms-4 container-start w-50 shadow mb-5">
+  <h1 class="card-title fs-3 p-2 bg-primary text-center text-light mt-4 shadow">{{ product.title }}</h1>
+  <div class="card mb-2">
+    <div *ngFor="let key of objectKeys(product)" class="list-container mb-2">
+      <!-- Sadece "thumbnail" ve "images" başlıklarının altındaki linkleri görüntülenmesin -->
+      <div *ngIf="key !== 'thumbnail' && key !== 'images'">
+        <ul class="list-group mt-2">
+          <li class="list-group-item"> 
+            <p><b>{{ key }}:</b> {{ product[key] }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- Thumbnail Carousel Gösterimi -->
+  <div class="container my-3 text-center">
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Thumbnail -->
+        <div *ngIf="product.thumbnail" class="img-fluid carousel-item active">
+          <img [src]="product.thumbnail" alt="Thumbnail" class="img-fluid d-block w-100">
+        </div>
+  
+        <!-- Images -->
+        <div *ngIf="product.images">
+          <div *ngFor="let image of product.images" class="img-fluid carousel-item">
+            <img [src]="image" alt="Image" class="img-fluid d-block w-100">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+
+
+<!-- MEVCUT ÇALIŞAN -->
+<!-- <div *ngIf="product">
+  <h1>{{ product.title }}</h1>
+  <p>Description: {{ product.description }}</p>
+  <p>Category: {{ product.category }}</p>
+  <p>Price: ${{ product.price }}</p>
+</div> -->
+
+
+<!-- <p>{{ product.category }}</p>
+<p>Price: ${{ product.price }}</p>
+<p>{{ product.brand }}</p>
+<p>{{ product.description }}</p>
+<p>{{ product.stock }}</p> -->
+
+
+
+<!-- <div *ngFor="let product of product">
+    <h2>
+      <a [routerLink]="['/productdetails', product.id]">{{ product.title }}</a>
+    </h2>
+     Diğer ürün bilgilerini eklesen de olur 
+  </div> -->

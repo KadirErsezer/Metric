@@ -1,0 +1,18 @@
+<!-- Bitenler Listesi -->
+
+  <div class="col-md-6">
+    <div class="list-container">
+      <h3 class="mb-3">Bitenler</h3>
+      <div *ngIf="completedItems.length === 0" class="alert alert-warning" [hidden]="!showCompletedAlert">
+        Yapacak dedik yatacak değil! 🤬
+      </div>
+      <ul class="list-group mt-3">
+        <li *ngFor="let item of completedItems; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+          {{ item }}
+          <button class="btn btn-danger" (click)="alertRemovecompletedItems(i)">Çıkar</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+

@@ -1,0 +1,41 @@
+<div class="container">
+  <div *ngIf="isVisible">
+    <ul>
+      <li> <app-todo *ngIf="items.length > 0"></app-todo> </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div *ngIf="isVisible">
+    <ul>
+      <li> <app-completed *ngIf="completedItems.length > 0"></app-completed> </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div *ngIf="isVisible">
+    <ul>
+      <li style="list-style-type: none;"> <app-todo></app-todo> </li>
+    </ul>
+</div>
+</div>
+
+<div class="container">
+  <div *ngIf="isVisible">
+    <ul>
+      <li style="list-style-type: none;"> <app-completed></app-completed> </li>
+    </ul>
+</div>
+</div> -->

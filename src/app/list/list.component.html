@@ -1,0 +1,65 @@
+<app-job [items]="todo" title="Yapilacaklar" [isVisible]="true"></app-job>
+<app-job [completedItems]="completed" title="Bitenler" [isVisible]="false"></app-job>
+
+<!-- 2. YÖNTEM (ÇALIŞMADI)  <app-job [items]="todo" title="Yapilacaklar" [isVisible]="true" [isButtonVisible]="false"></app-job>
+<app-job [completedItems]="completed" title="Bitenler" [isVisible]="false" [isButtonVisible]="true"></app-job> -->
+
+
+<!-- <app-yapilacaklar></app-yapilacaklar> -->
+
+
+
+
+<!-- Textbox -->
+  <!-- <div id="inputted" class="container text-center mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="inputs">
+          <div class="input-group">
+            <input [(ngModel)]="inputValue" placeholder="Yapılacaklar Listesi" class="form-control">
+            <button (click)="addItem()" class="btn btn-primary ">Ekle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+ <!-- Yapılacaklar Listesi
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="list-container">
+          <h3 class="mb-3">Yapılacaklar</h3>
+          <div *ngIf="completedItems.length === 0" class="alert alert-warning" [hidden]="!showItemsAlert">İlla ki yapacak bişeyler vardır. 🧐</div>
+          <ul class="list-group mt-3">
+            <li *ngFor="let item of items; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+              {{ item }}
+              <button class="ms-auto btn btn-success mx-2" (click)="completeItem(i)">Bitir</button>
+              <button class="btn btn-danger" (click)="confirmRemoveItem(i)">Çıkar</button>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+  <!-- Bitenler Listesi -->
+      <!-- <div class="col-md-6">
+        <div class="list-container">
+          <h3 class="mb-3">Bitenler</h3>
+          <div *ngIf="completedItems.length === 0" class="alert alert-warning" [hidden]="!showCompletedAlert">Yapacak dedim bakacak değil! 🤬</div>
+          <ul class="list-group mt-3">
+            <li *ngFor="let item of completedItems; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+              {{ item }}
+              <button class="btn btn-danger" (click)="confirmRemovecompletedItems(i)">Çıkar</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  
+  
+  
+
+  
+  

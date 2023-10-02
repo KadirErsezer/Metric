@@ -1,0 +1,10 @@
+li:hover {
+    background-color: #007bff;
+}
+li:hover a {
+    color: white;
+}
+
+* {
+    border: none;
+}
